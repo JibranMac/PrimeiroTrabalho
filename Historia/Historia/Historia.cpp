@@ -64,7 +64,7 @@ int main() {
 }
 */
 
-										//Inicio da Narrativa
+					//Inicio da Narrativa, A Maldicao do Castelo! (Capitulo 1)
 
 #include <iostream>
 #include <string>
@@ -72,6 +72,67 @@ int main() {
 using namespace std;
 
 int main() {
+					//Variaveis
+	string escolha;
+	string nome;
+	string cabelo;
+	string raca;
+	string olhos;
+	string classe;
+	char genero;
+	int idade;
+	
+					//Escolha de Personagem
+	cout << "    A Maldicao do Castelo!      " << endl;
+	cout << "\n";
+	cout << "Personalizacao de Personagem\n";
+	cout << "\n";
 
+	cout << "Digite o nome do seu personagem : \n";
+	getline(cin, nome);
+	
+	cout << "Qual sua idade : \n";
+	cin >> idade;
+
+	cout << "Qual seu Genero (F/M) : \n";
+	cin >> genero;
+
+	cout << "Qual a cor de seus olhos : \n";
+	cin >> olhos;
+
+	cout << "Qual a cor de seu cabelo : \n";
+	cin >> cabelo;
+
+	cout << "Qual a raca do seu personagem(Humano, Anao, Elfo, Orc) : \n";
+	cin >> raca;
+
+	cout << "Qual seria sua classe (Mago, Arqueiro, Guerreiro, Escudeiro) : \n";
+	cin >> classe;
+	cout << "\n";
+					//Fim da Escolha de Personagem
+	cout << "Parabens, voce escolheu as caracteristicas do seu personagem " << nome << " , agora vamos comecar nossa aventura!!\n";
+	cout << "\n";
+	cout << "\n";
+				
+	cout << "A Maldicao do Castelo! (Capitulo 1)";
+	cout << "\n";
+	cout << "Habilidades\n";
+	cout << "\n";
+	cout << "Nivel : 1\n";
+	cout << "Ataque : 1\n";
+	cout << "Defesa : 1\n";
+	cout << "Agilidade : 1\n";
+	cout << "Magia : 1\n";
+	cout << "\n";
+					//Inicio Da Historia
+	cout << "Vamos comecar?(S/N)\n";
+	cin >> escolha;
+
+	if (escolha == "S" || escolha == "s" || escolha == "Sim" || escolha == "SIM" || escolha == "sim") {
+		cout << "Era uma vez " << nome << " vagando pelas florestas obscuras do mundo!\n";
+	}
+	else if (escolha == "N" || escolha == "n" || escolha == "Nao" || escolha == "NAO" || escolha == "nao") {
+		cout << "Entao vai se... kkkkkk coringuei\n";
+	}
+	return 0;
 }
-
