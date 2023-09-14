@@ -115,6 +115,7 @@ int main() {
     }
 
     // Continuação da história
+
     cout << "A Maldicao do Castelo! (Capitulo 1)" << endl;
     cout << "\n";
     cout << "Habilidades" << endl;
@@ -128,18 +129,78 @@ int main() {
     cout << "\n";
 
     // Início da história
-    cout << "Voce esta em uma cidade medieval, pertencente a uma guilda de aventureiros, buscando por uma nova missao emocionante." << endl;
+    cout << "Voce acaba de chegar em uma cidade chamada Aguas Escuras, a procura de novas aventuras." << endl;
+    cout << "\n";
+    cout << "Voce, " << nome << " ,chega a guilda de aventureiros, buscando por uma nova missao." << endl;
     cout << "De repente, um mensageiro real chega a guilda com uma proposta intrigante..." << endl;
-    cout << "Ele informa que um castelo misterioso nas proximidades esta assombrado por uma terrivel maldicao e a guilda esta em busca de um corajoso aventureiro para investigar e quebrar a maldicao." << endl;
+    cout << "Ele informa que um castelo misterioso nas proximidades que esta assombrado por uma terrivel maldicao e a guilda esta em busca de aventureiros para investigar e quebrar a maldicao." << endl;
     cout << "Voce aceita esta missao? (S/N)" << endl;
     cin >> escolha;
     cout << "\n";
 
     if (escolha == "S" || escolha == "s" || escolha == "Sim" || escolha == "SIM" || escolha == "sim") {
-        cout << "Decidindo corajosamente aceitar a missao, voce parte em direcao ao castelo assombrado, preparado para enfrentar os desafios que aguardam." << endl;
+        cout << "Voce aceita a missao, e parte em direcao ao castelo, preparado para enfrentar os desafios que aguardam." << endl;
+        cout << "\n";
+        cout << "A medida que voce se aproxima do castelo, uma sensação de frieza e trevas toma conta do ambiente. Voce entra nas regioes do castelo!" << endl;
+        cout << "A escuridao e quase total, mas voce pode enxergar fracamente, pois esta com seu lampiao." << endl;
+        cout << "Voce começar explorando. A sua esquerda, ha um corredor iluminado fracamente por uma tocha. A sua direita, uma porta antiga e enferrujada." << endl;
+        cout << "O que voce faz? (Esquerda/Direita)" << endl;
+        cin >> escolha;
+        cout << "\n";
+
+        if (escolha == "Esquerda" || escolha == "esquerda") {
+            cout << "Voce decide continuar pelo corredor a esquerda, e acaba percebe alguns morcegos voando e ao fundo do corredor algum objeto brilhando. O que voce decide fazer? (Continuar explorando),(voltar para guilda)";
+            cout << "\n";
+            cin >> escolha;
+
+            if (escolha == "Continuar explorando" || escolha == "continuar explorando" || escolha == "continuar" || escolha == "Continuar") {
+                cout << "Voce encontra um bau, porem quando tenta abrir o bau te ataca e voce acaba perdendo 10 de vida" << vida - 10 << endl;
+                cout << "O que voce decide fazer? (Atacar),(Voltar a Guilda)";
+                cin >> escolha;
+                if (escolha == "Atacar" || escolha == "atacar") {
+                    cout << "Voce acaba derrotando o bau e recebe mais um nivel que fez voce receber mais 2 de habilidade em todos" << nivel + 1 << vida + 2 << ataque + 2 << defesa + 2 << agilidade + 2 << defesa + 2 << magia + 2 << endl;
+                }
+
+
+
+
+                //continuar multipla escolha e historia
+
+
+
+
+                else if (escolha == "Voltar a Guilda" || escolha == "voltar a guilda" || escolha == "Voltar" || escolha == "voltar") {
+                    cout << "Infelizmente voce tenta fugir, porem os portoes do castelo estao trancados e o cheff do castelo acaba te derrotando! (tente outro caminho)" << endl;
+                }
+                    //fim do caminho 2
+            }
+        }
+        else if (escolha == "Direita" || escolha == "direita") {
+            cout << "Voce decide entrar pela porta enferrujada a direita, e se depara com dois esqueletos, um possui uma espada e outro um cajado, qual voce decide atacar primeiro? (Espada),(Cajado)";
+            cout << "\n";
+            cin >> escolha;
+
+            if (escolha == "Espada" || escolha == "espada") {
+                cout << "Voce acaba dando conta de derrotar os dois esqueletos e acabou recebendo mais um nivel com que fez receber mais 2 de habilidade em todos" << nivel + 1 << vida + 2 << ataque + 2 << defesa + 2 << agilidade + 2 << defesa + 2 << magia + 2 << endl;
+            }
+
+
+
+
+            //continuar multipla escolha e historia
+
+
+
+
+            else if (escolha == "Cajado" || escolha == "cajado") {
+                cout << "Infelizmente voce tenta fugir, porem os portoes do castelo estao trancados e o cheff do castelo acaba te derrotando! (tente outro caminho)" << endl;
+            }
+                    //fim do caminho 3
+        }
     }
     else if (escolha == "N" || escolha == "n" || escolha == "Não" || escolha == "NÃO" || escolha == "não") {
         cout << "Optando por nao aceitar a missao, voce decide continuar sua jornada em busca de outras aventuras e misterios." << endl;
     }
+                    //fim do caminho 1
     return 0;
 }
