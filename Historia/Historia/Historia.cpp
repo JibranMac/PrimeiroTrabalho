@@ -58,7 +58,7 @@ int main() {
         magia += 15;
         defesa += 0;
         ataque += 0;
-        vida += 0;
+        vida += 100;
     }
     else if (classe == "Arqueiro" || classe == "arqueiro") {
         nivel += 1;
@@ -66,7 +66,7 @@ int main() {
         magia += 0;
         defesa += 0;
         ataque += 15;
-        vida += 0;
+        vida += 100;
     }
     else if (classe == "Escudeiro" || classe == "escudeiro") {
         nivel += 1;
@@ -74,7 +74,7 @@ int main() {
         magia += 0;
         defesa += 15;
         ataque += 5;
-        vida += 0;
+        vida += 100;
     }
     else if (classe == "Guerreiro" || classe == "guerreiro") {
         nivel += 1;
@@ -82,7 +82,7 @@ int main() {
         magia += 0;
         defesa += 5;
         ataque += 15;
-        vida += 0;
+        vida += 100;
     }
     // Ajustando as habilidades com base na raça escolhida
     if (raca == "Humano") {
@@ -90,28 +90,28 @@ int main() {
         magia += 5;
         defesa += 5;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
     else if (raca == "Anao") {
         agilidade += 1;
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 20;
+        vida += 0;
     }
     else if (raca == "Elfo") {
         agilidade += 5;
         magia += 10;
         defesa += 1;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
     else if (raca == "Orc") {
         agilidade += 1;
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 20;
+        vida += 0;
     }
 
     // Continuação da história
