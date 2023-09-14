@@ -78,7 +78,7 @@ int main() {
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 20;
+        vida += 10;
     }
     else if (raca == "Elfo") {
         agilidade += 5;
@@ -92,7 +92,7 @@ int main() {
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 20;
+        vida += 10;
     }
 
     // Continuação da história
@@ -129,13 +129,15 @@ int main() {
         cin >> escolha;
         cout << "\n";
 
+        //historia caminho 1
+
         if (escolha == "Esquerda" || escolha == "esquerda") {
             cout << "Voce decide continuar pelo corredor a esquerda e percebe alguns morcegos voando e ao fundo do corredor algum objeto brilhando. O que voce decide fazer? (Continuar explorando/Voltar para a guilda)" << endl;
             cout << "\n";
             cin >> escolha;
 
             if (escolha == "Continuar explorando" || escolha == "continuar explorando" || escolha == "continuar" || escolha == "Continuar") {
-                cout << "Voce encontra um bau, mas quando tenta abrir, ele te ataca e voce acaba perdendo 10 de vida. Sua vida atual: " << vida - 10 << endl;
+                cout << "Voce encontra um bau, mas quando tenta abrir, ele te ataca e voce acaba perdendo 10 de vida. Sua vida atual: " << endl;
                 vida -= 10;
                 cout << "O que voce decide fazer? (Atacar/Voltar a Guilda)" << endl;
                 cin >> escolha;
@@ -147,19 +149,34 @@ int main() {
                     agilidade += 2;
                     magia += 2;
                     vida += 2;
+
+
+
+                    //continuar historia
+                    //cout nessa fase para desenrolar a historia
+                    //cin para gravar
+                    //if para declarar novos caminhos
+
+
+
+
+
                 }
             }
             else if (escolha == "Voltar para a guilda" || escolha == "voltar para a guilda" || escolha == "Voltar" || escolha == "voltar") {
                 cout << "Infelizmente, voce tenta fugir, mas os portoes do castelo estao trancados, e o chefe do castelo acaba te derrotando! (Tente outro caminho)" << endl;
             }
         }
+
+        //historia caminho 2
+
         else if (escolha == "Direita" || escolha == "direita") {
             cout << "Voce decide entrar pela porta enferrujada a direita e se depara com dois esqueletos. Um deles possui uma espada e o outro um cajado. Qual voce decide atacar primeiro? (Espada/Cajado)" << endl;
             cout << "\n";
             cin >> escolha;
 
             if (escolha == "Espada" || escolha == "espada") {
-                cout << "Voce derrota os dois esqueletos, mas perde 10 de vida. Sua vida atual: " << vida - 10 << endl;
+                cout << "Voce derrota os dois esqueletos, mas perde 10 de vida. Sua vida atual: " << endl;
                 vida -= 10;
                 cout << "Voce tambem recebe mais um nivel, aumentando suas habilidades em todos os aspectos!" << endl;
                 nivel += 1;
@@ -168,9 +185,21 @@ int main() {
                 agilidade += 2;
                 magia += 2;
                 vida += 2;
+
+
+
+                //continuar historia
+                //cout nessa fase para desenrolar a historia
+                //cin para gravar
+                //if para declarar novos caminhos
+
+
+
+
+
             }
             else if (escolha == "Cajado" || escolha == "cajado") {
-                cout << "Infelizmente, voce tenta fugir, mas os portoes do castelo estao trancados, e o chefe do castelo acaba te derrotando! (Tente outro caminho)" << endl;
+                cout << "Infelizmente, voce tenta atacar o esqueleto com cajado e o esqueleto com espada acaba te acertando e te derrotando! (Tente outro caminho)" << endl;
             }
         }
     }
