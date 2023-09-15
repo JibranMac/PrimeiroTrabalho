@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cctype> // Para a função tolower
 
 using namespace std;
 
 int main() {
-    // Variáveis do personagem
+    // Variaveis do personagem
     string escolha;
     string nome;
     string cabelo;
@@ -14,7 +15,7 @@ int main() {
     char genero;
     int idade;
 
-    // Variáveis de Habilidades
+    // Variaveis de Habilidades
     int nivel = 1;
     int ataque = 10;
     int defesa = 10;
@@ -28,27 +29,51 @@ int main() {
     cout << "Personalizacao de Personagem" << endl;
     cout << "\n";
 
-    cout << "Digite o nome do seu personagem: " << endl;
+    // Nome (somente ate 25 caracteres)
+    cout << "Digite o nome do seu personagem (ate 25 caracteres): " << endl;
     cin.ignore();
     getline(cin, nome);
+    if (nome.length() > 25) {
+        nome = nome.substr(0, 25);
+    }
 
+    // Idade (somente o numero)
     cout << "Qual sua idade: " << endl;
     cin >> idade;
 
+    // Genero (M/F)
     cout << "Qual seu Genero (M/F): " << endl;
     cin >> genero;
+    genero = tolower(genero); // Converter para minusculas
+    if (genero != 'm' && genero != 'f') {
+        cout << "Genero invalido. Escolha 'M' ou 'F'." << endl;
+        return 1; // Encerrar o programa devido a entrada invalida
+    }
 
+    // Cor dos olhos (somente texto)
     cout << "Qual a cor de seus olhos: " << endl;
     cin >> olhos;
 
+    // Cor do cabelo (somente texto)
     cout << "Qual a cor de seu cabelo: " << endl;
     cin >> cabelo;
 
+    // Raca (somente Humano, Anao, Elfo, Orc)
     cout << "Qual a raca do seu personagem (Humano, Anao, Elfo, Orc): " << endl;
     cin >> raca;
+    if (raca != "Humano" && raca != "Anao" && raca != "Elfo" && raca != "Orc") {
+        cout << "Raca invalida. Escolha entre 'Humano', 'Anao', 'Elfo' ou 'Orc'." << endl;
+        return 1; // Encerrar o programa devido a entrada invalida
+    }
 
+    // Classe (somente Mago, Arqueiro, Guerreiro, Escudeiro)
     cout << "Qual seria sua classe (Mago, Arqueiro, Guerreiro, Escudeiro): " << endl;
     cin >> classe;
+    if (classe != "Mago" && classe != "Arqueiro" && classe != "Guerreiro" && classe != "Escudeiro") {
+        cout << "Classe invalida. Escolha entre 'Mago', 'Arqueiro', 'Guerreiro' ou 'Escudeiro'." << endl;
+        return 1; // Encerrar o programa devido a entrada invalida
+    }
+
     cout << "\n";
 
     // Ajustando as habilidades com base na classe escolhida
@@ -78,21 +103,21 @@ int main() {
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
     else if (raca == "Elfo") {
         agilidade += 5;
         magia += 10;
         defesa += 1;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
     else if (raca == "Orc") {
         agilidade += 1;
         magia += 1;
         defesa += 15;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
 
     // Continuação da história
@@ -149,9 +174,15 @@ int main() {
                     agilidade += 2;
                     magia += 2;
                     vida += 2;
+                    if (escolha == "Voltar a Guilda") {
+                        cout << "" << endl;
+                    }
+                    
 
+                
 
-
+                   //Falta o if
+                   // somente um else if pode ser usado
                     //continuar historia
                     //cout nessa fase para desenrolar a historia
                     //cin para gravar
