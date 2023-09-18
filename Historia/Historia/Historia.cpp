@@ -134,6 +134,68 @@ int main() {
     cout << "Magia: " << magia << endl;
     cout << "\n";
 
+    /*
+    * 
+    * 
+    * 
+Exemplo if para estudar 
+
+
+
+
+    #include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    char escolha;
+    
+    cout << "Você está em um túnel. Deseja ir para a esquerda (E) ou para a direita (D)? ";
+    cin >> escolha;
+    
+    if (escolha == 'E' || escolha == 'e') {
+        cout << "Você encontrou um monstro. Deseja atacar (A) ou correr (C)? ";
+        cin >> escolha;
+        
+        if (escolha == 'A' || escolha == 'a') {
+            cout << "Você ganhou a batalha!" << endl;
+            
+            cout << "Qual lado você gostaria de seguir novamente, escadas (S) ou descansar (D)? ";
+            cin >> escolha;
+            
+            if (escolha == 'S' || escolha == 's') {
+                cout << "Você encontrou a saída! Parabéns!" << endl;
+            } else if (escolha == 'D' || escolha == 'd') {
+                cout << "Você descansou, mas alguém te achou e te eliminou. Você perdeu." << endl;
+            } else {
+                cout << "Escolha inválida." << endl;
+            }
+        } else if (escolha == 'C' || escolha == 'c') {
+            cout << "Você correu, mas encontrou um beco sem saída. Você perdeu." << endl;
+        } else {
+            cout << "Escolha inválida." << endl;
+        }
+    } else if (escolha == 'D' || escolha == 'd') {
+        cout << "Você encontrou um servo. Deseja atacar (A) ou fugir (F)? ";
+        cin >> escolha;
+        
+        if (escolha == 'A' || escolha == 'a') {
+            cout << "Você atacou e venceu!" << endl;
+        } else if (escolha == 'F' || escolha == 'f') {
+            cout << "Você tentou fugir, mas acabou morto." << endl;
+        } else {
+            cout << "Escolha inválida." << endl;
+        }
+    } else {
+        cout << "Escolha inválida." << endl;
+    }
+    
+    return 0;
+}
+    */
+
+
+
     // Início da história
     cout << "Voce acaba de chegar em uma cidade chamada Berserk, a procura de novas aventuras." << endl;
     cout << "\n";
