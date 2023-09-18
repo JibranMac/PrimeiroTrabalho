@@ -17,10 +17,10 @@ int main() {
 
     // Variaveis de Habilidades
     int nivel = 1;
-    int ataque = 10;
-    int defesa = 10;
-    int agilidade = 10;
-    int magia = 10;
+    int ataque = 0;
+    int defesa = 0;
+    int agilidade = 0;
+    int magia = 0;
     int vida = 100;
 
     // Escolha de Personagem
@@ -78,16 +78,16 @@ int main() {
 
     // Ajustando as habilidades com base na classe escolhida
     if (classe == "Mago" || classe == "mago") {
-        magia += 5;
+        magia += 10;
     }
     else if (classe == "Arqueiro" || classe == "arqueiro") {
-        ataque += 5;
+        ataque += 10;
     }
     else if (classe == "Escudeiro" || classe == "escudeiro") {
-        defesa += 5;
+        defesa += 10;
     }
     else if (classe == "Guerreiro" || classe == "guerreiro") {
-        ataque += 5;
+        ataque += 10;
     }
 
     // Ajustando as habilidades com base na raca escolhida
@@ -96,27 +96,27 @@ int main() {
         magia += 5;
         defesa += 5;
         ataque += 5;
-        vida += 10;
+        vida += 0;
     }
     else if (raca == "Anao") {
-        agilidade += 1;
-        magia += 1;
-        defesa += 15;
+        agilidade += 0;
+        magia += 5;
+        defesa += 10;
         ataque += 5;
         vida += 0;
     }
     else if (raca == "Elfo") {
         agilidade += 5;
         magia += 10;
-        defesa += 1;
+        defesa += 0;
         ataque += 5;
         vida += 0;
     }
     else if (raca == "Orc") {
-        agilidade += 1;
-        magia += 1;
-        defesa += 15;
-        ataque += 5;
+        agilidade += 0;
+        magia += 0;
+        defesa += 5;
+        ataque += 15;
         vida += 0;
     }
 
@@ -135,14 +135,18 @@ int main() {
     cout << "\n";
 
     // Início da história
-    cout << "Voce acaba de chegar em uma cidade chamada Aguas Escuras, a procura de novas aventuras." << endl;
+    cout << "Voce acaba de chegar em uma cidade chamada Berserk, a procura de novas aventuras." << endl;
     cout << "\n";
-    cout << nome << " chega a guilda de aventureiros, buscando por uma nova missao." << endl;
-    cout << "De repente, um mensageiro real chega a guilda com uma proposta intrigante..." << endl;
-    cout << "Ele informa que um castelo misterioso nas proximidades esta assombrado por uma terrivel maldicao e a guilda esta em busca de aventureiros corajosos para investigar e quebrar a maldicao." << endl;
+    cout << "Bem vindo, " << nome << " voce chegou a guilda dos aventureiros de Berserk, sinta-se avontade para se cadastrar e escolher suas missoes!" << endl;
+    cout << "Enquanto voce olhava as missoes para conseguir algum dinheiro um mensageiro real chega a guilda com uma proposta intrigante..." << endl;
+    cout << "Ele informa que um castelo misterioso nas proximidades foi descoberto e esta assombrado por uma terrivel maldicao e a guilda esta em busca de aventureiros para investigar e quebrar a maldicao." << endl;
+    cout << "Recompesas : Itens Magicos de alta classe, 500 moedas de Ouro, Tomos de aprendizado e tambem a isenção de impostos." << endl;
+    cout << "\n";
     cout << "Voce aceita esta missao? (S/N)" << endl;
     cin >> escolha;
     cout << "\n";
+
+    //Conferir caminho e sintax
 
     if (escolha == "S" || escolha == "s" || escolha == "Sim" || escolha == "SIM" || escolha == "sim") {
         cout << "Voce aceita a missao e parte em direcao ao castelo, preparado para enfrentar os desafios que aguardam." << endl;
