@@ -192,9 +192,25 @@ int main() {
                         magia += 2;
                         vida += 2;
 
+                        cout << "\n";
+                        cout << "Habilidades :" << endl;
+                        cout << "\n";
+                        cout << "Nivel: " << nivel << endl;
+                        cout << "Ataque: " << ataque << endl;
+                        cout << "Defesa: " << defesa << endl;
+                        cout << "Magia: " << magia << endl;
+                        cout << "Agilidade: " << agilidade << endl;
+                        cout << "Vida: " << vida << endl;
+                        cout << "\n";
+
+                        //continuar historia
+
                         break;
                         //caminho 4
                     case 2: //Tentar Fugir linha 178
+                        cout << "Tentar Fugir" << endl;
+
+                        //continuar historia
 
                         break;
 
@@ -235,6 +251,7 @@ int main() {
 
                 //Caminho 3
                 switch (escolha){
+                    //caminho 3 espada
                 case 1://Espada linha 207
                     cout << "Voce derrota os dois esqueletos, mas perde 10 de vida. Sua vida atual: " << endl;
                     vida -= 10;
@@ -246,21 +263,34 @@ int main() {
                     magia += 2;
                     vida += 2;
 
+                    cout << "\n";
+                    cout << "Habilidades :" << endl;
+                    cout << "\n";
+                    cout << "Nivel: " << nivel << endl;
+                    cout << "Ataque: " << ataque << endl;
+                    cout << "Defesa: " << defesa << endl;
+                    cout << "Magia: " << magia << endl;
+                    cout << "Agilidade: " << agilidade << endl;
+                    cout << "Vida: " << vida << endl;
+                    cout << "\n";
+
+                    //continuar hisotira
 
                     break;
+                    //caminho 3 cajado
                 case 2://Cajado linha 208
-                    cout << "Infelizmente, voce tenta atacar o esqueleto com cajado e o esqueleto com espada acaba te acertando e te derrotando! (Tente outro caminho)" << endl;
-
-
-
+                    cout << "Infelizmente, voce tenta atacar o esqueleto que possui o cajado e o esqueleto com espada acaba te acertando e te cortando ao meio!" << endl;
+                    cout << "Voce foi morto por um esqueleto!" << endl;
+                    cout << "" << endl;
+                    cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho." << endl;
+                    return 1;//Retornar == 1, fim de caminho.
+                    //fim 3
                     break;
-                default:
+                default://caminho 3 default
                     cout << "Escolha novamente Entre : (1) e (2)!" << endl;
                     return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
                     break;
                 }
-
-
                 break;
                 //caminho 2 default
             default:
@@ -283,7 +313,5 @@ int main() {
             return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
             break;
         }
-
-
     return 0;
 }
