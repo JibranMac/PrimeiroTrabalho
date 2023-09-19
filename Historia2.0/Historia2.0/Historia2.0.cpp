@@ -3,6 +3,28 @@
 using namespace std;
 
 int main() {
+
+	int escolha;
+
+	cout << "Voce segue chega no castelo e se depara com dois lados, qual deseja ir?" << endl;
+	cout << "1. Esquerda" << endl;
+	cout << "2. Direita" << endl;
+	cin >> escolha;
+
+	switch (escolha) {
+	case 1:
+		cout << "Voce decide ir pela esquerda" << endl;
+	break;
+	case 2:
+		cout << "Voce decide ir pela direita" << endl;
+		break;
+	default:
+		cout << "Escreva novamente." << endl;
+		break;
+	}
+	return 0;
+}
+	/*
 	//variaveis
 	int escolha;
 
@@ -26,5 +48,5 @@ int main() {
 	else if (escolha == 2) {
 		cout << "Voce tenta atacar mas nao tem forca suficiente ainda" << endl;
 	}
-	return 0;
-}
+	*/
+
