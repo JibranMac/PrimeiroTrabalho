@@ -1,17 +1,15 @@
 #include <iostream>
-#include <string>
-#include <cctype> // Para a função tolower
+#include <string> //GETLINE
 
 using namespace std;
 
 int main() {
+
     // Variaveis do personagem
-    string escolha;
+    int escolha;
     string nome;
-    string cabelo;
-    string raca;
-    string olhos;
-    string classe;
+    int raca;
+    int classe;
     char genero;
     int idade;
 
@@ -29,99 +27,96 @@ int main() {
     cout << "Personalizacao de Personagem" << endl;
     cout << "\n";
 
-    // Nome (somente ate 25 caracteres)
-    cout << "Digite o nome do seu personagem (ate 25 caracteres): " << endl;
-    cin.ignore();
+    // Nome
+    cout << "Digite o nome do seu personagem: " << endl;
     getline(cin, nome);
-    if (nome.length() > 25) {
-        nome = nome.substr(0, 25);
-    }
+    cout << "\n";
 
     // Idade (somente o numero)
     cout << "Qual sua idade: " << endl;
     cin >> idade;
+    cout << "\n";
 
     // Genero (M/F)
     cout << "Qual seu Genero (M/F): " << endl;
     cin >> genero;
-    genero = tolower(genero); // Converter para minusculas
-    if (genero != 'm' && genero != 'f') {
-        cout << "Genero invalido. Escolha 'M' ou 'F'." << endl;
-        return 1; // Encerrar o programa devido a entrada invalida
-    }
-
-    // Cor dos olhos (somente texto)
-    cout << "Qual a cor de seus olhos: " << endl;
-    cin >> olhos;
-
-    // Cor do cabelo (somente texto)
-    cout << "Qual a cor de seu cabelo: " << endl;
-    cin >> cabelo;
-
-    // Raca (somente Humano, Anao, Elfo, Orc)
-    cout << "Qual a raca do seu personagem (Humano, Anao, Elfo, Orc): " << endl;
-    cin >> raca;
-    if (raca != "Humano" && raca != "Anao" && raca != "Elfo" && raca != "Orc") {
-        cout << "Raca invalida. Escolha entre 'Humano', 'Anao', 'Elfo' ou 'Orc'." << endl;
-        return 1; // Encerrar o programa devido a entrada invalida
-    }
-
-    // Classe (somente Mago, Arqueiro, Guerreiro, Escudeiro)
-    cout << "Qual seria sua classe (Mago, Arqueiro, Guerreiro, Escudeiro): " << endl;
-    cin >> classe;
-    if (classe != "Mago" && classe != "Arqueiro" && classe != "Guerreiro" && classe != "Escudeiro") {
-        cout << "Classe invalida. Escolha entre 'Mago', 'Arqueiro', 'Guerreiro' ou 'Escudeiro'." << endl;
-        return 1; // Encerrar o programa devido a entrada invalida
-    }
-
     cout << "\n";
 
-    // Ajustando as habilidades com base na classe escolhida
-    if (classe == "Mago" || classe == "mago") {
-        magia += 10;
-    }
-    else if (classe == "Arqueiro" || classe == "arqueiro") {
-        ataque += 10;
-    }
-    else if (classe == "Escudeiro" || classe == "escudeiro") {
-        defesa += 10;
-    }
-    else if (classe == "Guerreiro" || classe == "guerreiro") {
-        ataque += 10;
-    }
+    // Raca (somente Humano, Anao, Elfo, Orc)
+    cout << "Qual a raca do seu personagem: " << endl;
+    cout << "1. Humano" << endl;
+    cout << "2. Anao" << endl;
+    cout << "3. Elfo" << endl;
+    cout << "4. Orc" << endl;
+    cin >> raca;
+    cout << "\n";
 
-    // Ajustando as habilidades com base na raca escolhida
-    if (raca == "Humano") {
+    //Escolha de switch para facilitar mas tambem poderia se usar função if.
+    switch (raca) {
+    case 1://Humano
         agilidade += 5;
         magia += 5;
         defesa += 5;
         ataque += 5;
         vida += 0;
-    }
-    else if (raca == "Anao") {
+        break;
+    case 2://Anao
         agilidade += 0;
         magia += 5;
         defesa += 10;
         ataque += 5;
         vida += 0;
-    }
-    else if (raca == "Elfo") {
+        break;
+    case 3://Elfo
         agilidade += 5;
         magia += 10;
         defesa += 0;
         ataque += 5;
         vida += 0;
-    }
-    else if (raca == "Orc") {
+        break;
+    case 4://Orc
         agilidade += 0;
         magia += 0;
         defesa += 5;
         ataque += 15;
         vida += 0;
+        break;
+    default://Se caso não for nenhuma opção
+        cout << "Escolha Novamente sua Raca!" << endl;
+        return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+        break;
     }
 
-    // Continuação da história
+    // Classe (somente Mago, Arqueiro, Guerreiro, Escudeiro)
+    cout << "Qual seria sua classe (Mago, Arqueiro, Guerreiro, Escudeiro): " << endl;
+    cout << "1. Mago" << endl;
+    cout << "2. Arqueiro" << endl;
+    cout << "3. Guerreiro" << endl;
+    cout << "4. Escudeiro" << endl;
+    cin >> classe;
+    cout << "\n";
 
+    //Escolha de switch para facilitar mas tambem poderia se usar função if.
+    switch (classe) {
+    case 1://Mago
+        magia += 10;
+        break;
+    case 2://Arqueiro
+        ataque += 10;
+        break;
+    case 3://Guerreiro
+        agilidade += 10;
+        break;
+    case 4://Escudeiro
+        defesa += 10;
+        break;
+    default:
+        cout << "Escolha Novamente sua Classe!" << endl;
+        return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+        break;
+    }
+
+    //Mostrar habilidades Iniciais
     cout << "A Maldicao do Castelo! (Capitulo 1)" << endl;
     cout << "\n";
     cout << "Habilidades" << endl;
@@ -129,72 +124,10 @@ int main() {
     cout << "Nivel: " << nivel << endl;
     cout << "Ataque: " << ataque << endl;
     cout << "Defesa: " << defesa << endl;
-    cout << "Vida: " << vida << endl;
-    cout << "Agilidade: " << agilidade << endl;
     cout << "Magia: " << magia << endl;
+    cout << "Agilidade: " << agilidade << endl;
+    cout << "Vida: " << vida << endl;
     cout << "\n";
-
-    /*
-    *
-    *
-    *
-Exemplo if para estudar
-
-
-
-
-    #include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-    char escolha;
-
-    cout << "Você está em um túnel. Deseja ir para a esquerda (E) ou para a direita (D)? ";
-    cin >> escolha;
-
-    if (escolha == 'E' || escolha == 'e') {
-        cout << "Você encontrou um monstro. Deseja atacar (A) ou correr (C)? ";
-        cin >> escolha;
-
-        if (escolha == 'A' || escolha == 'a') {
-            cout << "Você ganhou a batalha!" << endl;
-
-            cout << "Qual lado você gostaria de seguir novamente, escadas (S) ou descansar (D)? ";
-            cin >> escolha;
-
-            if (escolha == 'S' || escolha == 's') {
-                cout << "Você encontrou a saída! Parabéns!" << endl;
-            } else if (escolha == 'D' || escolha == 'd') {
-                cout << "Você descansou, mas alguém te achou e te eliminou. Você perdeu." << endl;
-            } else {
-                cout << "Escolha inválida." << endl;
-            }
-        } else if (escolha == 'C' || escolha == 'c') {
-            cout << "Você correu, mas encontrou um beco sem saída. Você perdeu." << endl;
-        } else {
-            cout << "Escolha inválida." << endl;
-        }
-    } else if (escolha == 'D' || escolha == 'd') {
-        cout << "Você encontrou um servo. Deseja atacar (A) ou fugir (F)? ";
-        cin >> escolha;
-
-        if (escolha == 'A' || escolha == 'a') {
-            cout << "Você atacou e venceu!" << endl;
-        } else if (escolha == 'F' || escolha == 'f') {
-            cout << "Você tentou fugir, mas acabou morto." << endl;
-        } else {
-            cout << "Escolha inválida." << endl;
-        }
-    } else {
-        cout << "Escolha inválida." << endl;
-    }
-
-    return 0;
-}
-    */
-
-
 
     // Início da história
     cout << "Voce acaba de chegar em uma cidade chamada Berserk, a procura de novas aventuras." << endl;
@@ -204,106 +137,153 @@ int main() {
     cout << "Ele informa que um castelo misterioso nas proximidades foi descoberto e esta assombrado por uma terrivel maldicao e a guilda esta em busca de aventureiros para investigar e quebrar a maldicao." << endl;
     cout << "Recompesas : Itens Magicos de alta classe, 500 moedas de Ouro, Tomos de aprendizado e tambem a isenção de impostos." << endl;
     cout << "\n";
-    cout << "Voce aceita esta missao? (S/N)" << endl;
+    cout << "Voce aceita esta missao? " << endl;
+    cout << "1. Aceitar" << endl;
+    cout << "2. Recusar" << endl;
     cin >> escolha;
     cout << "\n";
 
-    //Conferir caminho e sintax
-
-    if (escolha == "S" || escolha == "s" || escolha == "Sim" || escolha == "SIM" || escolha == "sim") {
-        cout << "Voce aceita a missao e parte em direcao ao castelo, preparado para enfrentar os desafios que aguardam." << endl;
-        cout << "\n";
-        cout << "A medida que voce se aproxima do castelo, uma sensacao de frieza e trevas toma conta do ambiente. Voce entra nas regioes do castelo!" << endl;
-        cout << "A escuridao e quase total, mas voce pode enxergar fracamente com seu lampiao." << endl;
-        cout << "Voce comeca explorando. A sua esquerda, ha um corredor iluminado fracamente por uma tocha. A sua direita, uma porta antiga e enferrujada." << endl;
-        cout << "O que voce faz? (Esquerda/Direita)" << endl;
-        cin >> escolha;
-        cout << "\n";
-
-        //historia caminho 1
-
-        if (escolha == "Esquerda" || escolha == "esquerda") {
-            cout << "Voce decide continuar pelo corredor a esquerda e percebe alguns morcegos voando e ao fundo do corredor algum objeto brilhando. O que voce decide fazer? (Continuar explorando/Voltar para a guilda)" << endl;
+        //caminho 1 aceitar
+        switch (escolha) {
+        case 1://Aceitar linha 141
+            cout << "Voce aceita a missao e parte em direcao ao castelo, preparado para enfrentar os desafios que aguardam." << endl;
             cout << "\n";
+            cout << "A medida que voce se aproxima do castelo, uma sensacao de frieza e trevas toma conta do ambiente. Voce entra nas regioes do castelo!" << endl;
+            cout << "A escuridao e quase total, mas voce pode enxergar fracamente com seu lampiao." << endl;
+            cout << "Voce comeca explorando. A sua esquerda, ha um corredor iluminado fracamente por uma tocha. A sua direita, uma porta antiga e enferrujada." << endl;
+            cout << "O que voce faz? (Esquerda/Direita)" << endl;
+            cout << "1. Esquerda" << endl;
+            cout << "2. Direita" << endl;
             cin >> escolha;
+            cout << "\n";
 
-            if (escolha == "Continuar explorando" || escolha == "continuar explorando" || escolha == "continuar" || escolha == "Continuar") {
-                cout << "Voce encontra um bau, mas quando tenta abrir, ele te ataca e voce acaba perdendo 10 de vida. Sua vida atual: " << endl;
-                vida -= 10;
-                cout << "O que voce decide fazer? (Atacar/Voltar a Guilda)" << endl;
+            //caminho 2
+            switch (escolha) {
+                //caminho 2 esquerda
+            case 1://Esquerda linha 154
+                cout << "Voce decide continuar pelo corredor a esquerda e percebe alguns morcegos voando e ao fundo do corredor algum objeto brilhando. O que voce decide fazer?" << endl;
+                cout << "1. Continuar Explorando" << endl;
+                cout << "2. Voltar para a Guilda" << endl;
+                cout << "\n";
                 cin >> escolha;
-                if (escolha == "Atacar" || escolha == "atacar") {
-                    cout << "Voce derrota o bau e recebe mais um nivel, aumentando suas habilidades em todos os aspectos!" << endl;
+                cout << "\n";
+
+                //Caaminho 3
+                switch (escolha){
+                    //caminho 3
+                case 1://continuar explorando linha 165
+                    cout << "Voce encontra um bau, mas quando tenta abrir, ele te ataca e voce acaba perdendo 10 de vida. Sua vida atual: " << endl;
+                    vida -= 10;
+                    cout << "Essa é sua vida atual : " << vida << endl;
+                    cout << "O que voce decide fazer?" << endl;
+                    cout << "1. Atacar" << endl;
+                    cout << "2. Tentar Fugir" << endl;
+                    cin >> escolha;
+                    cout << "\n";
+
+                    //Caminho 4
+                    switch (escolha) {
+                    case 1: //Atacar linha 178
+                        cout << "Voce derrota o bau e recebe mais um nivel, aumentando suas habilidades em todos os aspectos!" << endl;
+                        nivel += 1;
+                        ataque += 2;
+                        defesa += 2;
+                        agilidade += 2;
+                        magia += 2;
+                        vida += 2;
+
+                        break;
+                        //caminho 4
+                    case 2: //Tentar Fugir linha 178
+
+                        break;
+
+                    default://caminho 4 default
+                        cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+                        return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+                        break;
+                    }
+
+
+                    break;
+                    //caminho 3
+                case 2://voltar para guilda linha 166
+                    cout << "Infelizmente, voce tenta fugir, mas os portoes do castelo estao trancados!!" << endl;
+                    cout << "Voce acaba morrendo pela maldicao do castelo." << endl;
+                    cout << "" << endl;
+                    cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho." << endl;
+                    return 1;//Retornar == 1, fim de caminho.
+                    //fim 2
+                    break;
+                    //caminho 3 default
+                default:
+                    cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+                    return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+                    break;
+                }
+
+
+                break;
+                //caminho 2 direita
+            case 2://Direita linha 155
+                cout << "Voce decide entrar pela porta enferrujada a direita e se depara com dois esqueletos. Um deles possui uma espada e o outro um cajado. Qual voce decide atacar primeiro?" << endl;
+                cout << "1. Espada" << endl;
+                cout << "2. Cajado" << endl;
+                cout << "\n";
+                cin >> escolha;
+                cout << "\n";
+
+                //Caminho 3
+                switch (escolha){
+                case 1://Espada linha 207
+                    cout << "Voce derrota os dois esqueletos, mas perde 10 de vida. Sua vida atual: " << endl;
+                    vida -= 10;
+                    cout << "Voce tambem recebe mais um nivel, aumentando suas habilidades em todos os aspectos!" << endl;
                     nivel += 1;
                     ataque += 2;
                     defesa += 2;
                     agilidade += 2;
                     magia += 2;
                     vida += 2;
-                    if (escolha == "Voltar a Guilda") {
-                        cout << "" << endl;
-                    }
+
+
+                    break;
+                case 2://Cajado linha 208
+                    cout << "Infelizmente, voce tenta atacar o esqueleto com cajado e o esqueleto com espada acaba te acertando e te derrotando! (Tente outro caminho)" << endl;
 
 
 
-
-                    //Falta o if
-                    // somente um else if pode ser usado
-                     //continuar historia
-                     //cout nessa fase para desenrolar a historia
-                     //cin para gravar
-                     //if para declarar novos caminhos
-
-
-
-
-
+                    break;
+                default:
+                    cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+                    return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+                    break;
                 }
+
+
+                break;
+                //caminho 2 default
+            default:
+                cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+                return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+                break;
             }
-            else if (escolha == "Voltar para a guilda" || escolha == "voltar para a guilda" || escolha == "Voltar" || escolha == "voltar") {
-                cout << "Infelizmente, voce tenta fugir, mas os portoes do castelo estao trancados, e o chefe do castelo acaba te derrotando! (Tente outro caminho)" << endl;
-            }
+            //caminho 1 recusar
+            break;
+        case 2://Recusar linha 142
+            cout << "Optando por nao aceitar a missao, voce decide continuar sua jornada em busca de outras aventuras e misterios." << endl;
+            cout << "" << endl;
+            cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho." << endl;
+            return 1;//Retornar == 1, fim de caminho.
+            //fim 1
+            break;
+            //caminho 1 default
+        default:
+            cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+            return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+            break;
         }
 
-        //historia caminho 2
-
-        else if (escolha == "Direita" || escolha == "direita") {
-            cout << "Voce decide entrar pela porta enferrujada a direita e se depara com dois esqueletos. Um deles possui uma espada e o outro um cajado. Qual voce decide atacar primeiro? (Espada/Cajado)" << endl;
-            cout << "\n";
-            cin >> escolha;
-
-            if (escolha == "Espada" || escolha == "espada") {
-                cout << "Voce derrota os dois esqueletos, mas perde 10 de vida. Sua vida atual: " << endl;
-                vida -= 10;
-                cout << "Voce tambem recebe mais um nivel, aumentando suas habilidades em todos os aspectos!" << endl;
-                nivel += 1;
-                ataque += 2;
-                defesa += 2;
-                agilidade += 2;
-                magia += 2;
-                vida += 2;
-
-
-
-                //continuar historia
-                //cout nessa fase para desenrolar a historia
-                //cin para gravar
-                //if para declarar novos caminhos
-
-
-
-
-
-            }
-            else if (escolha == "Cajado" || escolha == "cajado") {
-                cout << "Infelizmente, voce tenta atacar o esqueleto com cajado e o esqueleto com espada acaba te acertando e te derrotando! (Tente outro caminho)" << endl;
-            }
-        }
-    }
-    else if (escolha == "N" || escolha == "n" || escolha == "Não" || escolha == "NÃO" || escolha == "não") {
-        cout << "Optando por nao aceitar a missao, voce decide continuar sua jornada em busca de outras aventuras e misterios." << endl;
-    }
-    // Fim do caminho 1
 
     return 0;
 }
