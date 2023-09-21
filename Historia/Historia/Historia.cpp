@@ -588,8 +588,8 @@ int main() {
 				cout << "" << endl;
 				cout << "Voce acaba seguindo entre as salas com uma pessima visibilidade e se depara com uma enorme porta, porem voce consegue ver entre a fresta da porta que existe um Boss, protegendo um cristal que emana uma luz vermelha." << endl;
 				cout << "O que voce fara?" << endl;
-				cout << "1. Atacar de Frente o Boss!" << endl;//vive mas morre dps
-				cout << "2. Analisar a sala e ver possivei armadilhas." << endl;//viver
+				cout << "1. Atacar de Frente o Boss!" << endl;//vive 
+				cout << "2. Analisar a sala e ver possivei armadilhas." << endl;//vive mas morre
 				cout << "3. Voltar para outro caminho." << endl;//morre
 				cout << "" << endl;
 				cin >> escolha;
@@ -600,7 +600,7 @@ int main() {
 					//switch
 					cout << "Voce ataca diretamente o Boss na esperanca de conseguir infrigir algum dano, e definitivadamente voce consegue tirar uma boa parte de sua armadura, bem onde estava desgastada!!" << endl;
 					cout << "Em um contra golpe, voce acaba sofrendo uma perda de 50% de sua vida e sendo jogado longe com o impacto. " << endl;
-					vida = vida/2;
+					vida = vida / 2;
 					cout << "Porem voce nao desiste e se levanta bravamente (o tempo parece parar para voce). Em um piscar de olhos voce descobre possivei estrategias de ataque! " << endl;
 					cout << "" << endl;
 					cout << "O que voce fara?" << endl;
@@ -619,10 +619,10 @@ int main() {
 						cout << "" << endl;
 
 						nivel += 10;
-						ataque += 20;
-						defesa += 20;
-						agilidade += 20;
-						magia += 20;
+						ataque += 40;
+						defesa += 40;
+						agilidade += 40;
+						magia += 40;
 						vida += 20;
 						moedaPrata += 64;
 						moedaOuro += 142;
@@ -639,100 +639,77 @@ int main() {
 						cout << "Voce Possui: " << moedaPrata << ", de Prata!" << endl;
 						cout << "Voce Possui: " << moedaOuro << ", de Ouro!" << endl;
 						cout << "" << endl;
-						
-						
-						
-						//continuar fim
-						
-						
-						
-						
-						
-						
-						
+
+						cout << "Porem, voce perdeu toda sua forca de vontade, toda sua forca apos uma maldicao ser cravada em sua alma!" << endl;
+						cout << "A fim de sua aventura com tua sua destreza e rancor do seu passado voce arranca a cabeca do BOSS!!" << endl;
+						cout << "" << endl;
+						cout << "Enquanto voce saia do castelo, voce chorava, chorava por todos os erros do seu passado e o porque abandonou sua vida." << endl;
+						cout << "Na saida do castelo, segurando a cebeca do boss em suas maos voce se depara com algo estranho." << endl;
+						cout << "A paisagem nao era a mesma de dias atras, o terreno estava todo destruido a selva tinha devorado o caminho de onde voce tinha vindo!" << endl;
+						cout << "Conforme voce chegava a cidade de Berserk voce se toca da sua situacao, algo inacreditavel, voce cai de joelhos no chao desesperado e em choque!" << endl;
+						cout << "O tempo dentro do castelo era diferente do tempo normal, tinham se passado anos, decadas, seculos? voce nao sabia a resposta porem estava preso em um tempo de onde nao veio!" << endl;
+						cout << "Essa e a : MALDICAO DO CASTELO!" << endl;
+
 						break;
 					case 2://Utilizar o local para fazer uma especie de armadilha.
-						cout << " " << endl;
-						cout << " " << endl;
-						cout << " " << endl;
-
+						cout << "Voce decide utilizar as armadilhas do local ao seu favor, voce faz todo o possivel para ativar nos momentos exatos da passagem do Boss!" << endl;
+						cout << "Apos algumas tentativas, voce consegue infringir algum dano a ele porem nada efetivo e como uma ultima medida voce vislumbra um lustre enorme pindurado no teto." << endl;
+						cout << "Como uma ultima forca voce consegue arrebendar o lustre fazendo cair exatamente em cima do Boss sendo totalmente efetivo, porem algo acontece no mesmo momento!" << endl;
+						cout << "Isso acaba destruindo o andar inteiro por causa de uma enorme explosao causada pelo Boss quando morreu, isso faz com que voce seja soterrado vivo sem nenhuma chance de sobrevivencia " << endl;
+						cout << "Narrador : Otima tentativa voce estava quase la " << nome << " ,tente outro caminho!" << endl;
+						return 1;//Retornar == 1, fim de caminho.
 						break;
 					default:
 						cout << "Escolha novamente Entre : (1), (2) e (3)!" << endl;
 						return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 						break;
 					}
-
-
-
-
-
-
-
-
-
-
-
-
 					break;
 				case 2:// analisar
 					//switch
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
+					cout << "Voce analisa a sala e se depara com diversos tipos de botoes no chao." << endl;
+					cout << "Indiferente de sua habilidade voce entra na sala do Boss e comeca a utilizar todas as armadilhas!" << endl;
+					cout << "Voce consegue Destruir um dos bracos dele, porem o ritmo da luta so estava aumentando e voce decide por fim fazer uma investida final." << endl;
+					cout << "Voce avista duas oportunidades, qual voce escolheria?" << endl;
+					cout << "1. Tentar atacar suas costas em um contra ataque!" << endl;
+					cout << "2. Fazer uma investida final!" << endl;
+					cout << "" << endl;
+					cin >> escolha;
+					cout << "" << endl;
 
-
-
+					switch (escolha) {
+					case 1://Tentar atacar suas costas em um contra ataque!
+						cout << "Voce espera um ataque do Boss!" << endl;
+						cout << "Voce rebece o ataque, porem nao consegue desviar e nem se defender fazendo com que voce perda seu equilibrio caindo no chao." << endl;
+						cout << "Enquanto voce tentava levantar todo machucado, voce percebe ter perdido seu braco!" << endl;
+						cout << "Infelizmente voce acaba morrendo antes mesmo do ultimo ataque do Boss!" << endl;
+						cout << "Narrador : Otima tentativa voce estava quase la " << nome << " ,tente outro caminho!" << endl;
+						return 1;//Retornar == 1, fim de caminho.
+						break;
+					case 2://Fazer uma investida final!
+						cout << "Com toda sua forca voce faz sua ultima investida!" << endl;
+						cout << "" << endl;
+						cout << "Voce corre em direcao ao Boss com muita confianca e infelizmente voce tropeca e bate a cabeca com tudo em uma pilastra fazendo com que voce perdece a consiencia e o Boss desferisse um ultimo golpe em voce!" << endl;
+						cout << "Narrador : Otima tentativa voce estava quase la " << nome << " ,tente outro caminho!" << endl;
+						return 1;//Retornar == 1, fim de caminho.
+						break;
+					default:
+						cout << "Escolha novamente Entre : (1) e (2)!" << endl;
+						return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
+						break;
+					}
 					break;
 				case 3:// voltar outr cam
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-					cout << " " << endl;
-
-
+					cout << "Voce tenta voltar para outro caminho mas se depara com uma horda de monstros correndo atras de voce, voce consegue derrotar alguns porem aparecem mais e mais a medida que voce corre!" << endl;
+					cout << "Infelizmente a quantidade de monstro era tao grande que voce acaba sendo derrotado de tanto lutar, pelo seu proprio cansaco!" << endl;
+					cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho!" << endl;
+					return 1;//Retornar == 1, fim de caminho.
 					break;
 				default:
 					cout << "Escolha novamente Entre : (1), (2) e (3)!" << endl;
 					return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 					break;
 				}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				break;
 				//caminho 3 cajado
 			case 2://Cajado linha 208
