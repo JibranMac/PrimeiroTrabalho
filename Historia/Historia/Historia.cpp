@@ -618,13 +618,13 @@ int main() {
 						cout << "" << endl;
 
 						nivel += 10;
-						ataque += 40;
-						defesa += 40;
-						agilidade += 40;
-						magia += 40;
-						vida += 20;
-						moedaPrata += 64;
-						moedaOuro += 142;
+						ataque += 41;
+						defesa += 41;
+						agilidade += 41;
+						magia += 41;
+						vida += 54;
+						moedaPrata += 65;
+						moedaOuro += 144;
 
 						cout << "" << endl;
 						cout << "Antigas Habilidades:" << endl;
