@@ -546,7 +546,6 @@ int main() {
 				break;
 			}
 
-
 			break;
 			//caminho 2 direita
 		case 2://Direita linha 155
