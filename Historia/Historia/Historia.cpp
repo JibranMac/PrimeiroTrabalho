@@ -275,7 +275,7 @@ int main() {
 							cout << "o que eu faco agora?" << endl;
 							cout << "sairei daqui vivo?" << endl;
 							cout << "Ao refletir sobre sua situacao voce decide voltar e sair do castelo, com muito cuidado e calma voce consegue sair" << endl;
-							cout << "Quando voce sai do castelo voce fica horrorizado com o que ve, tudo a sua volta esta destruido e o pouco que tinha de pe estava podre ou velho, apos passar horas investigando a redondesa voce finalmente percebe o que estava acontecendo!" << endl;
+							cout << "Quando voce sai do castelo voce fica horrorizado com o que ve, tudo a sua volta esta destruido e o pouco que tinha de pe estava podre ou velho, apos passar horas investigando a redondeza voce finalmente percebe o que estava acontecendo!" << endl;
 							cout << "Tinha se passsado anos e anos fora do castelo sendo que para voce foram somente algumas horas, se ajoelhando no chao com uma face triste, finalmente conheces a:" << endl;
 							cout << "MALDICAO DO CASTELO" << endl;
 						}
@@ -561,7 +561,7 @@ int main() {
 				//caminho 3 espada
 			case 1://Espada linha 207
 				cout << "Com sua destreza voce acaba bloqueando o primeiro ataque do monstro e dando um golpe direto no primeiro esqueleto o derrotando, porem recebeu um ataque em suas costas do esqueleto com o cajado de magia" << endl;
-				cout << "Porem, uma flecha nao pode te parar e assim voce acerta com tudo outro golpe sendo totalmente fatal!!" << endl;
+				cout << "Porem, este ataque nao pode te parar e assim voce acerta com tudo outro golpe sendo totalmente fatal!!" << endl;
 				cout << "Voce derrota os dois esqueletos, mas perde 10 de vida sua vida atual." << endl;
 				cout << "" << endl;
 				vida -= 10;
