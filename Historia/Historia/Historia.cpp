@@ -246,7 +246,7 @@ int main() {
 					case 1://atac fren
 						cout << "Ao tentar atacar de frente o boss, voce acaba caindo em varias armadilhas que estavam espalhadas pelo salao!" << endl;
 						cout << "Que pena!, voce foi muito descuidado e acabou morrendo de forma horrivel, tente denovo," << nome << " !." << endl;
-						cout << " ";
+						cout << "" << endl;
 						return 1;
 
 						break;
@@ -256,7 +256,7 @@ int main() {
 						cout << "Sabendo disso voce decide usar as armadilhas ao seu favor contra o boss, o atraindo e fazendo-o cair em todas elas, e assim o matando!" << endl;
 						cout << "Apos a derrota do boss voce vai em direcao ao cristal e tenta destrui-lo, porem ao destrui-lo uma grande energia e liberada causando uma explosao, explosao essa que faz com que varios monstros sejam atraidos pelo alto barulho e vao em sua direcao" << endl;
 						cout << "Voce, " << nome << " ,ja ferido por conta da explosao tem 3 opcoes" << endl;
-						cout << " ";
+						cout << "" << endl;
 						cout << "1. Ficar e lutar contra os monstros" << endl;
 						cout << "2. Tentar correr" << endl;
 						cout << "3. Se enconder" << endl;
@@ -353,10 +353,10 @@ int main() {
 						//caminho 5
 						switch (escolha) {
 						case 1://Tentar destruir o cristal //vive
-							cout << "Voce observa bem o Boss, e encontra algum tipo de padrão em sua movimentação," << endl;
+							cout << "Voce observa bem o Boss, e encontra algum tipo de padrao em sua movimentacao," << endl;
 							cout << "parece que a cada 5 voltas durante a sala em que ele da ele fica parado longe do cristal." << endl;
 							cout << "Com um pouco de inteligencia voce usa sua furtividade para correr direto no cristal, desferindo um otimo golpe!" << endl;
-							cout << "Voce consegue atacar o cristal e em poucos segundos ele explode em varios pedaços," << endl;
+							cout << "Voce consegue atacar o cristal e em poucos segundos ele explode em varios pedacos," << endl;
 							cout << "porem o boss de sala comeca a vir ate voce preparado para te atacar com seu gigante poste de metal coberto de espinhos!!" << endl;
 							cout << "o que voce decide?" << endl;
 							cout << "1. Esquivar" << endl;// vive
