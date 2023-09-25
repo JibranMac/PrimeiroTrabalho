@@ -36,7 +36,7 @@ int main() {
 	getline(cin, nome);
 	cout << "" << endl;
 
-	// Idade (somente o numero)
+	// Idade
 	cout << "Qual sua idade? " << endl;
 	cout << "" << endl;
 	cin >> idade;
@@ -60,7 +60,8 @@ int main() {
 		cout << "Escolha Novamente seu Genero!" << endl;
 		return 0;
 	}
-	// Raca (somente Humano, Anao, Elfo, Orc)
+
+	// Raca
 	cout << "Qual a raca do seu personagem: " << endl;
 	cout << "1. Humano" << endl;
 	cout << "2. Anao" << endl;
@@ -102,7 +103,7 @@ int main() {
 		break;
 	}
 
-	// Classe (somente Mago, Arqueiro, Guerreiro, Escudeiro)
+	// Classe
 	cout << "Qual seria sua classe: " << endl;
 	cout << "1. Mago" << endl;
 	cout << "2. Arqueiro" << endl;
@@ -126,7 +127,7 @@ int main() {
 	case 4://Escudeiro
 		defesa += 10;
 		break;
-	default:
+	default://Se caso não for nenhuma opção
 		cout << "Escolha Novamente sua Classe!" << endl;
 		return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 		break;
@@ -197,6 +198,7 @@ int main() {
 			case 1://continuar explorando linha 165
 				cout << "Voce encontra um bau, mas quando tenta abrir, ele te ataca e voce acaba perdendo 10 de vida. Sua vida atual. " << endl;
 				vida -= 10;
+				cout << "Voce possui : " << vida << " de vida." << endl;
 				cout << "O que voce decide fazer?" << endl;
 				cout << "1. Atacar." << endl;
 				cout << "2. Tentar Fugir." << endl;
@@ -259,8 +261,12 @@ int main() {
 						cout << "2. Tentar correr" << endl;
 						cout << "3. Se enconder" << endl;
 						cout << "Decida-se!" << endl;
+						cout << "" << endl;
 						cin >> escolha;
-						cout << " ";
+						cout << "" << endl;
+
+						//Uso do if para demonstrar como seria a formatação do codigo caso fosse usado!
+
 						if (escolha == 1) {
 							cout << "Por conta dos ferimentos voce nao consegue lutar contra os monstros e acaba morrendo!" << endl;
 							cout << "Infelizmente, " << nome << " ,voce nao pensou no estado do seu corpo e tentou lutar" << endl;
@@ -323,15 +329,16 @@ int main() {
 					cout << "" << endl;
 					cin >> escolha;
 					cout << "" << endl;
+
 					switch (escolha) {
-					case 1:
+					case 1://apertar botao
 						cout << "Ao apertar o botao, as portas de onde voce esta sao trancadas e um gas venenoso começa a sair e ser despejado das paredes" << endl;
 						cout << "Infelizmente, voce nao consegue resistir ao efeito do veneno e acaba SUCUMBINDO!!" << endl;
 						cout << "" << endl;
 						cout << "Narrador : Otima tentativa " << nome << " ,mas nao caia no veneno." << endl;
 						return 1;
 						break;
-					case 2:
+					case 2://subir escadaria
 						cout << "Voce sobe as escadas cagado de medo, e a sua frente voce encontra um grande salao com um Boss no seu centro protegendo um grande cristal vermelho, cuja sua luz ilumina todo local!" << endl;
 						cout << "O boss parece ter uma grande armadura e deve ter aproximadamente 3 metros de altura. Voce observa mais cuidadosamente e dentro da grande armadura nao existe nenhum ser!!!" << endl;
 						cout << "Ele carrega um gigante poste de metal coberto de espinhos e tambem," << endl;
@@ -418,7 +425,7 @@ int main() {
 									return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 									break;
 
-								default:
+								default://caso nao escolha nenhuma alternativa
 									cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 									return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 									break;
@@ -438,33 +445,33 @@ int main() {
 								cout << "" << endl;
 
 								switch (escolha) {
-								case 1:
+								case 1://carregar habilidade especial
 									cout << "O boss vendo voce parado te ataca com muita facilidade com toda sua força e acaba te matando!" << endl;
 									cout << nome << ", infelizmente voce nao possui nenhuma habilidade especial." << endl;
 									cout << "Narrador : Otima tentativa, tente outro caminho!" << endl;
 									cout << "" << endl;
 									return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
-								case 2:
+								case 2://correr do boss
 									cout << "Voce tenta correr do Boss, porem tropeca e caba rolando escadaria a baixo fraturando sua coluna e perdendo sua movimentacao!" << endl;
 									cout << "Infelizmente, voce no chao sofre um ultimo golpe fazendo com que voce acabe morrendo!" << endl;
 									cout << "Narrador : Otima tentativa " << nome << ", tente outro caminho!" << endl;
 									cout << "" << endl;
 									return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 									break;
-								default:
+								default://caso nao escolha nenhuma alternativa
 									cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 									return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 									break;
 								}
 								break;
-							default:
+							default://caso nao escolha nenhuma alternativa
 								cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 								return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 								break;
 							}
 							break;
 							//caminho 5
-						case 2://Atacar de frente o Boss //morre
+						case 2://Atacar de frente o Boss
 							cout << "Com muita coragem voce decide atacar o Boss!" << endl;
 							cout << "Voce consegue desferir uma otima sequencia de ataques e causa um grande dano a ele, porem voce acaba tropeçando no desnivel do chao " << endl;
 							cout << "e o monstro sem do alguma levanta seu grande poste de metal e ataca com toda sua forca!" << endl;
@@ -476,7 +483,7 @@ int main() {
 
 							break;
 							//caminho 5
-						case 3://Procura outro caminho //vive mas morre dps
+						case 3://Procura outro caminho
 							cout << "Voce decide procurar outro caminho para seguir, porem descendo as escadas uma especie de armadilha se ativa fazendo com que voce caia em um outro local do castelo!" << endl;
 							cout << "Esse local esta completamente destruido e cheio de musgo por todas as paredes, como se estivesse abandonado por muito tempo." << endl;
 							cout << "Voce comeca explorando esse local cuidadosamente e se depara com dois caminhos, qual voce decide passar?" << endl;
@@ -501,20 +508,17 @@ int main() {
 								cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho!" << endl;
 								return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 								break;
-							default:
+							default://caso nao escolha nenhuma alternativa
 								cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 								return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 								break;
 							}
-
-
 							break;
-						default://caminho 5 default
+						default://caso nao escolha nenhuma alternativa
 							cout << "Escolha novamente Entre : (1), (2) e (3)!" << endl;
 							return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 							break;
 						}
-
 						break;//caminho 4
 					default:
 						cout << "Escolha novamente Entre : (1) e (2)!" << endl;
@@ -527,8 +531,6 @@ int main() {
 					return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 					break;
 				}
-
-
 				break;
 				//caminho 3
 			case 2://voltar para guilda linha 166
@@ -658,7 +660,7 @@ int main() {
 						cout << "Narrador : Otima tentativa voce estava quase la " << nome << " ,tente outro caminho!" << endl;
 						return 1;//Retornar == 1, fim de caminho.
 						break;
-					default:
+					default://caso nao escolha nenhuma alternativa
 						cout << "Escolha novamente Entre : (1), (2) e (3)!" << endl;
 						return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 						break;
@@ -692,7 +694,7 @@ int main() {
 						cout << "Narrador : Otima tentativa voce estava quase la " << nome << " ,tente outro caminho!" << endl;
 						return 1;//Retornar == 1, fim de caminho.
 						break;
-					default:
+					default://caso nao escolha nenhuma alternativa
 						cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 						return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 						break;
@@ -704,7 +706,7 @@ int main() {
 					cout << "Narrador : Otima tentativa " << nome << " ,tente outro caminho!" << endl;
 					return 1;//Retornar == 1, fim de caminho.
 					break;
-				default:
+				default://caso nao escolha nenhuma alternativa
 					cout << "Escolha novamente Entre : (1), (2) e (3)!" << endl;
 					return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 					break;
@@ -719,14 +721,14 @@ int main() {
 				return 1;//Retornar == 1, fim de caminho.
 				//fim 3
 				break;
-			default://caminho 3 default
+			default://caso nao escolha nenhuma alternativa
 				cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 				return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 				break;
 			}
 			break;
 			//caminho 2 default
-		default:
+		default://caso nao escolha nenhuma alternativa
 			cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 			return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 			break;
@@ -741,7 +743,7 @@ int main() {
 		//fim 1
 		break;
 		//caminho 1 default
-	default:
+	default://caso nao escolha nenhuma alternativa
 		cout << "Escolha novamente Entre : (1) e (2)!" << endl;
 		return 1;//Retornar == 1, caso não tenha escolha dos determinadas escolhas.
 		break;
