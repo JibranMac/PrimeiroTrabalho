@@ -1,5 +1,42 @@
+/*
+SWITCH é um comando em C que serve para fazer testes condicionais, testando igualdades, 
+onde podemos usar várias opções de comparações. Assim como o nosso conhecido par IF ELSE, 
+o comando switch também serve para fazer testes condicionais.
+
+switch (expressão)
+{
+   case value1:
+		// código caso expressão
+		// seja igual a value1
+
+   case value2:
+		// código caso expressão
+		// seja igual a value2
+
+   case value3:
+		// código caso expressão
+		// seja igual a value3
+
+   default:
+		// código caso expressão
+		// não seja nenhum case acima
+}
+
+A instrução if também é conhecida como instrução de tomada de decisão,
+pois ela faz a tomada de decisão com base em determinada condição ou expressão.
+
+if (teste){
+   // Código caso o
+   // teste seja TRUE
+}
+else {
+   // Código caso o
+   // teste seja FALSE
+}
+*/
+
 #include <iostream>
-#include <string> //GETLINE
+#include <string> //GETLINE .Extrai cadeias de caracteres do fluxo de entrada linha por linha.
 
 using namespace std;
 
@@ -23,7 +60,10 @@ int main() {
 	int moedaBronze = 60;
 	int moedaPrata = 25;
 	int moedaOuro = 1;
-
+	//Tutorial
+	cout << "" << endl;
+	cout << "--Somente digitar numeros quando for descrito--" << endl;
+	cout << "" << endl;
 	// Escolha de Personagem
 	cout << "A Maldicao do Castelo!" << endl;
 	cout << "" << endl;
@@ -180,7 +220,7 @@ int main() {
 		cout << "" << endl;
 		cin >> escolha;
 		cout << "" << endl;
-
+		
 		//caminho 2
 		switch (escolha) {
 			//caminho 2 esquerda
